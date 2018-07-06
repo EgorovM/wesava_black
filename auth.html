@@ -7,8 +7,14 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  		<script type="text/javascript" src="js/jquery.min.js"></script>
    		<script type="text/javascript" src="js/materialize.min.js"></script>
+
+   		<script type="text/javascript">
+   			$(document).ready(function(){
+			    $('select').formSelect();
+			});
+   		</script>
 
   		<style>
   			.input-field label { pointer-events: all; }
@@ -16,11 +22,26 @@
 	</head>
 
 	<body>
+		<nav class="white" role="navigation">
+			<div class="nav-wrapper container">
+				<a id="logo-container" href="index.html" class="brand-logo">Wesava</a>
+			</div>
+		</nav>
+
 		<div class="container">
 			<div class = "row">
 				<h5 class="center">Войти</h5>
 
 				<form class = "col offset-s3 s6">
+					<div class = "row">
+						<div class="input-field col s12">
+							<select>
+								<option value="1">Продавец</option>
+								<option value="2">Покупатель</option>
+							</select>
+						</div>
+					</div>
+
 					<div class="row">
 						<div class="input-field col s12 ">
 							<input class = "active" id="email" type="email" class="validate">

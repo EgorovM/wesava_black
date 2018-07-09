@@ -10,6 +10,11 @@
 	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('select').formSelect();
+		});
+	</script>
 </head>
 
 <body>
@@ -27,7 +32,7 @@
 			<form class="col offset-s3 s6">
 				<div class="row">
 					<div class="input-field col s12">
-						<select class="selecter">
+						<select>
 							<option value="1">Продавец</option>
 							<option value="2">Покупатель</option>
 						</select>
@@ -55,7 +60,7 @@
 					</div>
 				</div>
 
-				<div class="row forSoho">
+				<div class="row">
 					<div class="input-field col s12">
 						<input placeholder="Например: shop.com" class="active" id="shop" type="text" class="validate">
 						<label for="last_name">Магазин</label>
@@ -70,7 +75,7 @@
 				</div>
 				<div class="row">
 					<div class="Button">
-						<a href="soho_profile.html" class="waves-effect waves-light btn-small right regNow">Зарегестрироваться</a>
+						<a href="soho_profile.html" class="waves-effect waves-light btn-small right">Зарегестрироваться</a>
 					</div>
 				</div>
 
@@ -105,28 +110,6 @@
 			</div>
 		</div>
 	</footer>
-
-
-	<script type="text/javascript">
-
-		$('select').formSelect();
-
-		$( '.selecter' ).change(function() {
-		    if($( 'select option:selected' ).text() == 'Покупатель'){
-
-				$('.forSoho').css('display', 'none');
-				$('.regNow').attr('href', 'eshoper_profile.html');
-
-			} else {
-
-				$('.forSoho').css('display', 'block');
-				$('.regNow').attr('href', 'soho_profile.html');
-
-			}
-		});
-
-	</script>
-
 </body>
 
 </html>

@@ -10,12 +10,6 @@
   		<script type="text/javascript" src="js/jquery.min.js"></script>
    		<script type="text/javascript" src="js/materialize.min.js"></script>
 
-   		<script type="text/javascript">
-   			$(document).ready(function(){
-			    $('select').formSelect();
-			});
-   		</script>
-
   		<style>
   			.input-field label { pointer-events: all; }
   		</style>
@@ -35,7 +29,7 @@
 				<form class = "col offset-s3 s6">
 					<div class = "row">
 						<div class="input-field col s12">
-							<select>
+							<select class="selecter">
 								<option value="1">Продавец</option>
 								<option value="2">Покупатель</option>
 							</select>
@@ -57,7 +51,7 @@
 					</div>
 					<div class = "row">
 						<div class="Button">
-							<a href="soho_profile.html" class="waves-effect waves-light btn-small right">Войти</a>
+							<a href="soho_profile.html" class="waves-effect waves-light btn-small right logNow">Войти</a>
 						</div>
 					</div>
 
@@ -72,7 +66,7 @@
 						<h5 class="white-text">О проекте</h5>
 						<p class="grey-text text-lighten-4">С развитием IT-технологий пропорционально растет количество киберпреступлений. По данным с сайта МВД рост интернет-мошенничества вырос на 15% в 2017 г.  Наш проект готов решить основые проблемы кибербезопасности. </p>
 					</div>
-					
+
 					<div class="col offset-s3 s3">
 						<h5 class="white-text">Обратная связь</h5>
 						<ul>
@@ -89,5 +83,19 @@
 				</div>
 			</div>
 		</footer>
+		<script type="text/javascript">
+		    $('select').formSelect();
+			$( '.selecter' ).change(function() {
+			    if($( 'select option:selected' ).text() == 'Покупатель'){
+
+					$('.logNow').attr('href', 'shops.html');
+
+				} else {
+
+					$('.logNow').attr('href', 'soho_profile.html');
+
+				}
+			});
+   		</script>
 	</body>
 </html>

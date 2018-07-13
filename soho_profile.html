@@ -14,14 +14,6 @@
   		<script type="text/javascript" src="js/jquery.min.js"></script>
    		<script type="text/javascript" src="js/materialize.min.js"></script>
 
-   		<script type="text/javascript">
-		   $(function() {
-		      $('#example').barrating({
-		        theme: 'fontawesome-stars'
-		      });
-		   });
-		</script>
-
 	</head>
 
 	<body>
@@ -42,15 +34,16 @@
 						<div class="card teal lighten-2 ">
 							<div class="card-content white-text center-align infoblock">
 								<h4 class = "light-green-text text-accent-3" style="font-family: bp;">Подтверждено!</br><i class="material-icons" style="font-size: 3rem;">done</i></h4>
+								<h4 class = "light-green-text text-accent-3" style="font-family: bp; margin-top: -15px">Общий рейтинг выданный 5-ю отзывами: 4.8/5 <i class="material-icons" style="font-size: 3rem;">star</i></h4>
 								<hr class="light">
-								<h4 style="font-size: 3rem;">Myshop</h4>
-								<h6 style="margin-top: -10px; opacity: 0.75;">Егоров Мичил Прокопьевич</h6>
+								<h4 style="font-size: 3rem;" id="shop">Myshop</h4>
+								<h6 style="margin-top: -10px; opacity: 0.75;" id="name">Егоров Мичил Прокопьевич</h6>
 								<h6>Занимаюсь продажой мебели ручной работы</h6>
 								<ul style="font-size: 1.15rem;">
 									<li>Контакты: </li>
 									<ul>
-										<li>egorov_michil@mail.ru</li>
-										<li>egorovmichil9@gmail.com</li>
+										<li id="email">egorov_michil@mail.ru</li>
+										<li id="num">egorovmichil9@gmail.com</li>
 									</ul>
 								</ul>
 							</div>
@@ -138,8 +131,19 @@
 			</div>
 		</footer>
 
-	    <script src="js/jquery.barrating.js"></script>
-	    <script src="js/examples.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			  	$('#example').barrating({
+			    	theme: 'fontawesome-stars'
+		  		});
+			});
+
+			$('#email').html(localStorage.getItem('email'));
+			$('#name').html(localStorage.getItem('first_name')+' '+localStorage.getItem('last_name'));
+			$('#num').html(localStorage.getItem('num'));
+			$('#shop').html(localStorage.getItem('shop'));
+
+		</script>
 	</body>
 
 </html>

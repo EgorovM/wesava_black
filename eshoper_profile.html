@@ -1,142 +1,147 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Продавец</title>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-		<link rel="stylesheet" href="css/fontawesome-stars.css">
-		<script src="js/jquery.barrating.min.js"></script>
-		<link rel="stylesheet" href="css/css-stars.css">
-		<link rel="stylesheet" href="css/style.css">
-  		<script type="text/javascript" src="js/jquery.min.js"></script>
-   		<script type="text/javascript" src="js/materialize.min.js"></script>
 
-   		<script type="text/javascript">
-		   $(function() {
-		      $('#example').barrating({
-		        theme: 'fontawesome-stars'
-		      });
-		   });
-		</script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Продавец</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="css/fontawesome-stars.css">
+    <script src="js/jquery.barrating.min.js"></script>
+    <link rel="stylesheet" href="css/css-stars.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
-	</head>
+</head>
 
-	<body>
-		<nav class="white" role="navigation">
-			<div class="nav-wrapper container">
-				<a id="logo-container" href="index.html" class="brand-logo" style="color: #4db6ac;">Wesava</a>
-			</div>
-		</nav>
-		<br>
-		<div class="container">
-			<div class = "row">
-				<div style = "background-image: url('imgs/logoOfEshoper.jpg'); border-radius: 1000px; height: 300px; width: 300px; background-repeat: no-repeat; margin: 0 auto;background-size: 100%;">
-				</div>
-
-				<div style = "margin: 100px auto 0;">
-
-					<div class = "row">
-						<div class="card teal lighten-2 ">
-							<div class="card-content white-text center-align infoblock">
-								<h4 style="font-size: 3rem;">Николай Осипов</h4>
-								<h6 style="margin-top: -10px; opacity: 0.75;">Более 30 написанных отзывов</h6>
-								<ul style="font-size: 1.15rem;">
-									<li>Контакты: </li>
-									<ul>
-										<li>89644154162</li>
-										<li>@osipovkolik</li>
-									</ul>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br>
-		<div class = "container">
-			<div class="row">
-				<form class="col offset-s2 s8">
-					<div class="row">
-						<div class="input-field col s12">
-							<textarea id="textarea" class="materialize-textarea"></textarea>
-							<label for="textarea">Написать Николаю!</label>
-						</div>
-					</div>
-
-					<div class = "row">
-						<div class="Button">
-							<a href="soho_profile.html" class="waves-effect waves-light btn-small right">Отправить</a>
-						</div>
-					</div>
-				</form>
-			</div>
-            <hr>
-            <div class = "row">
-                <div class = "col s2">
-                    <p> sohoShop </p>
-                    <p> 05.07.2018 </p>
-                    <p> 2/5 <i class="material-icons" style="font-size: 17px">star</i> </p>
-                    <p> Рейтинг +2</p>
-                    <p> osipovkolik </p>
-                </div>
-
-                <div class = "col s9">
-                        <p>Товар пришел с опозданием в неделю из-за ошибки продавца. Цены завышены, товар пришел с дефектом. Продавец переотправил товар.</p>
-                </div>
-
+<body>
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="index.html" class="brand-logo" style="color: #4db6ac;">Wesava</a>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div style="background-image: url('imgs/logoOfEshoper.jpg'); border-radius: 1000px; height: 300px; width: 300px; background-repeat: no-repeat; margin: 0 auto;background-size: 100%;">
             </div>
-            <hr>
-            <div class = "row">
-                <div class = "col s2">
-                    <p> superSohoShop </p>
-                    <p> 05.07.2018 </p>
-                    <p> 4/5 <i class="material-icons" style="font-size: 17px">star</i> </p>
-                    <p> Рейтинг +4</p>
-                    <p> osipovkolik </p>
-                </div>
 
-                <div class = "col s9">
-                        <p>Очень удобная мебель. Быстро, недорого и главное - красиво.</p>
-                </div>
+            <div style="margin: 100px auto 0;">
 
+                <div class="row">
+                    <div class="card teal lighten-2 ">
+                        <div class="card-content white-text center-align infoblock">
+                            <h4 style="font-size: 3rem;" id="name">Николай Осипов</h4>
+                            <h6 style="margin-top: -10px; opacity: 0.75;">Более 30 написанных отзывов</h6>
+                            <ul style="font-size: 1.15rem;">
+                                <li>Контакты: </li>
+                                <ul>
+                                    <li id="email">osipovkolik@gmail.com</li>
+                                    <li id="num">89644154162</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <hr>
-		</div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <form class="col offset-s2 s8">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea" class="materialize-textarea"></textarea>
+                        <label for="textarea">Написать Пользователю!</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="Button">
+                        <a href="soho_profile.html" class="waves-effect waves-light btn-small right">Отправить</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col s2">
+                <p> sohoShop </p>
+                <p> 05.07.2018 </p>
+                <p> 2/5 <i class="material-icons" style="font-size: 17px">star</i> </p>
+                <p> Рейтинг +2</p>
+                <p> osipovkolik </p>
+            </div>
+
+            <div class="col s9">
+                <p>Товар пришел с опозданием в неделю из-за ошибки продавца. Цены завышены, товар пришел с дефектом. Продавец переотправил товар.</p>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col s2">
+                <p> superSohoShop </p>
+                <p> 05.07.2018 </p>
+                <p> 4/5 <i class="material-icons" style="font-size: 17px">star</i> </p>
+                <p> Рейтинг +4</p>
+                <p> osipovkolik </p>
+            </div>
+
+            <div class="col s9">
+                <p>Очень удобная мебель. Быстро, недорого и главное - красиво.</p>
+            </div>
+
+        </div>
+        <hr>
+    </div>
 
 
 
 
-		<footer class="page-footer teal">
-			<div class="container">
-				<div class="row">
-					<div class="col l6 s12">
-						<h5 class="white-text">О проекте</h5>
-						<p class="grey-text text-lighten-4">С развитием IT-технологий пропорционально растет количество киберпреступлений. По данным с сайта МВД рост интернет-мошенничества вырос на 15% в 2017 г.  Наш проект готов решить основые проблемы кибербезопасности. </p>
-					</div>
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">О проекте</h5>
+                    <p class="grey-text text-lighten-4">С развитием IT-технологий пропорционально растет количество киберпреступлений. По данным с сайта МВД рост интернет-мошенничества вырос на 15% в 2017 г. Наш проект готов решить основые проблемы кибербезопасности. </p>
+                </div>
 
-					<div class="col offset-s3 s3">
-						<h5 class="white-text">Обратная связь</h5>
-						<ul>
-							<li class="white-text">dya.sakhayana@yandex.ru</li>
-							<li class="white-text">valerii777999@gmail.com</li>
-							<li class="white-text">egorovmichil9@gmail.com</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="footer-copyright">
-				<div class="container">
-					<p style="text-align: center;"> ©wesava 2018</p>
-				</div>
-			</div>
-		</footer>
+                <div class="col offset-s3 s3">
+                    <h5 class="white-text">Обратная связь</h5>
+                    <ul>
+                        <li class="white-text">dya.sakhayana@yandex.ru</li>
+                        <li class="white-text">valerii777999@gmail.com</li>
+                        <li class="white-text">egorovmichil9@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <p style="text-align: center;"> ©wesava 2018</p>
+            </div>
+        </div>
+    </footer>
 
-	    <script src="js/jquery.barrating.js"></script>
-	    <script src="js/examples.js"></script>
-	</body>
+
+    <script type="text/javascript">
+        $(function() {
+            $('#example').barrating({
+                theme: 'fontawesome-stars'
+            });
+        });
+
+        $('#email').html(localStorage.getItem('email'));
+        $('#name').html(localStorage.getItem('first_name') + ' ' + localStorage.getItem('last_name'));
+        $('#num').html(localStorage.getItem('num'));
+        $('#shop').html(localStorage.getItem('shop'));
+    </script>
+
+</body>
 
 </html>

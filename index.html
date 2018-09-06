@@ -15,15 +15,18 @@
 	</head>
 
 	<body>
-		<nav class="white" role="navigation">
-			<div class="nav-wrapper container">
-				<a id="logo-container" href="index.html" class="brand-logo" style="color: #4db6ac;">Wesava</a>
-				<ul class="right hide-on-med-and-down">
-					<li><a href="shops.html">Посмотреть продавцов</a></li>
-					<li><a href="auth.html">Войти</a></li>
-				</ul>
-			</div>
-		</nav>
+		<header>
+			<nav class="white" role="navigation">
+				<div class="nav-wrapper container">
+					<a id="logo-container" href="index.html" class="brand-logo" style="color: #4db6ac;">Wesava</a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="shops.html">Посмотреть продавцов</a></li>
+						<li><a href="auth.html">Войти</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
 
 		<div id="index-banner" class="parallax-container">
 			<div class="section no-pad-bot">
@@ -32,7 +35,7 @@
 					<h1 class="header center teal-text text-lighten-2" style="font-size: 120px;">Wesava</h1>
 
 					<div class="row center" style="margin-top: 0px;">
-						<h5 class="header col s12 light black-text">Начни продавать сейчас!</h5>
+						<h5 class="header col s12 light white-text">Начни продавать сейчас!</h5>
 					</div>
 
 					<div class="row center" style="margin-top: 100px;">
@@ -43,7 +46,7 @@
 				</div>
 			</div>
 			<div class="parallax">
-				<img src="background1.jpg" alt="Unsplashed background img 1">
+				<img src="imgs/logoOfSoho.jpg" alt="Unsplashed background img 1">
 			</div>
 		</div>
 
@@ -109,7 +112,11 @@
 				</div>
 			</div>
 		</div>
-
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.parallax').parallax();
+			});
+		</script>
 		<footer class="page-footer teal">
 			<div class="container">
 				<div class="row">
